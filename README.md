@@ -1,5 +1,7 @@
 # dbt Jaffle Shop - Postgres Container
 
+A containerized version of the dbt Jaffle Shop quickstart demo.
+
 ## Prerequisite Tools:
 * git
 * a text editor
@@ -10,8 +12,8 @@
 * [pgcli](https://www.pgcli.com/)
 
 ## Setup
-* clone quickstart repo https://github.com/dbt-labs/jaffle_shop
-* create env using script - NOTE THE PARAMS TO USE
+* clone quickstart repo https://github.com/dbt-labs/jaffle_shop to the root of this repo
+* create `.env` file using script - NOTE THE PARAMS TO USE
 * spin up resources using `docker-compose up -d`
 
 Test connection
