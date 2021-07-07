@@ -39,29 +39,29 @@
 The output should look something like:
 
  ```bash
- Running with dbt=0.19.1
- dbt version: 0.19.1
- python version: 3.8.8
- python path: /usr/local/bin/python
- os info: Linux-4.19.121-linuxkit-x86_64-with-glibc2.2.5
- Using profiles.yml file at /home/dbt/.dbt/profiles.yml
- Using dbt_project.yml file at /home/dbt/work/dbt_project.yml
+Running with dbt=0.19.1
+dbt version: 0.19.1
+python version: 3.8.8
+python path: /usr/local/bin/python
+os info: Linux-4.19.121-linuxkit-x86_64-with-glibc2.2.5
+Using profiles.yml file at /home/dbt/.dbt/profiles.yml
+Using dbt_project.yml file at /home/dbt/jaffle_shop/dbt_project.yml
 
- Configuration:
-   profiles.yml file [OK found and valid]
-   dbt_project.yml file [OK found and valid]
+Configuration:
+  profiles.yml file [OK found and valid]
+  dbt_project.yml file [OK found and valid]
 
- Required dependencies:
-  - git [OK found]
+Required dependencies:
+ - git [OK found]
 
- Connection:
-   host: HOSTNAME_FROM_ENV
-   port: 5432
-   user: USERNAME_FROM_ENV
-   database: postgres
-   schema: SCHEMA_NAME_FROM_ENV
-   search_path: None
-   keepalives_idle: 30
-   sslmode: None
-   Connection test: OK connection ok
+Connection:
+  host: jaffle_postgres
+  port: 5432
+  user: dbt
+  database: jaffle_shop
+  schema: dev
+  search_path: None
+  keepalives_idle: 0
+  sslmode: None
+  Connection test: OK connection ok
  ```
