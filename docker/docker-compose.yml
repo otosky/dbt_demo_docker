@@ -1,0 +1,30 @@
+---
+version: "3.9"
+
+services:
+  dbt_runtime:
+    image: otosky/dbt-dev:19.1-v1
+    tty: true
+    env_file:
+      - .env
+    depends_on:
+      - jaffle_postgres
+    volumes:
+      - ${WORKING_DIRECTORY}:${CONTAINER_HOME}/jaffle_shop
+      - ${MY_HOME}/.ssh:/home/dbt/.ssh
+      - ${PWD}/dbt/profiles.yml:/home/dbt/.dbt/profiles.yml
+    ports:
+      # for docs server
+      - "5434:8080"
+
+  jaffle_postgres:
+    image: postgres:11
+    environment:
+      - POSTGRES_DB=jaffle_shop
+      - POSTGRES_USER=dbt
+      - POSTGRES_PASSWORD=dbt
+      - POSTGRES_HOST=jaffle_shop
+    volumes:
+      - ${PWD}/postgres/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+    ports:
+      - "5433:5432"
