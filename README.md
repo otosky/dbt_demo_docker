@@ -52,3 +52,11 @@ Connection test: OK connection ok
 PGOPTIONS=--search-path=dev pgcli --host 'localhost' --user dbt -d jaffle_shop -p 5433
 ```
 
+## Usage
+
+You can either build the models from the pre-existing files in the jaffle_shop repo or follow along
+with the [Getting Started](https://docs.getdbt.com/tutorial/setting-up) tutorial which walks you step-by-step through dbt's features & workflow.
+
+## Notes
+
+dbt documentation dev server is exposed on port 5434 at <http://localhost:5434/>
