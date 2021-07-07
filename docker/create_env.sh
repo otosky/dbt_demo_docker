@@ -10,7 +10,6 @@ Database Host;DBT_HOST
 Database User;DBT_USER
 Database Password;DBT_PASSWORD
 Database Dev Schema;DBT_DEV_SCHEMA
-Path to working directory;WORKING_DIRECTORY
 EOF
 
 is_prompt_password_related() {

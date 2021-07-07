@@ -6,13 +6,13 @@ services:
     image: otosky/dbt-dev:19.1-v1
     tty: true
     env_file:
-      - .env
+      - docker/.env
     depends_on:
       - jaffle_postgres
     volumes:
-      - ${WORKING_DIRECTORY}:${CONTAINER_HOME}/jaffle_shop
+      - ${PWD}/jaffle_shop:${CONTAINER_HOME}/jaffle_shop
       - ${MY_HOME}/.ssh:/home/dbt/.ssh
-      - ${PWD}/dbt/profiles.yml:/home/dbt/.dbt/profiles.yml
+      - ${PWD}/docker/dbt/profiles.yml:/home/dbt/.dbt/profiles.yml
     ports:
       # for docs server
       - "5434:8080"
