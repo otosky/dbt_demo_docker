@@ -34,6 +34,6 @@ Thumbs.db
 *.mov
 *.wmv
 
-jaffle_shop/
+jaffle_shop/*
 
 docker/**/.env
