@@ -37,3 +37,4 @@ Thumbs.db
 jaffle_shop/*
 
 docker/**/.env
+**/settings.json
