@@ -1,0 +1,13 @@
+---
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: '{{ env_var("DBT_HOST") }}'
+      user: '{{ env_var("DBT_USER") }}'
+      password: '{{ env_var("DBT_PASSWORD") }}'
+      port: 5432
+      dbname: jaffle_shop
+      schema: dev
+      threads: 4
