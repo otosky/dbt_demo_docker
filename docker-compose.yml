@@ -6,7 +6,7 @@ services:
     image: otosky/dbt-dev:19.1-v1
     tty: true
     env_file:
-      - docker/.env
+      - .env
     depends_on:
       - jaffle_postgres
     volumes:
